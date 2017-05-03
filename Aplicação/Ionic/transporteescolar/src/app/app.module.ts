@@ -10,6 +10,8 @@ import { Viagem } from '../pages/viagem/viagem';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AgmCoreModule } from 'angular2-google-maps/core'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -18,8 +20,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Viagem
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCbsO8OiXdTP6Jt1jWMgCCkigSiWSw3-Is'
+    }),
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
