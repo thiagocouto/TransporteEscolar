@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { AgmCoreModule } from 'angular2-google-maps/core';
-
 /**
  * Generated class for the Viagem page.
  *
