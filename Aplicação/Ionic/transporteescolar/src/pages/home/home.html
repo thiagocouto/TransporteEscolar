@@ -9,13 +9,12 @@
 
 <ion-content>
   <div padding>
-    <h3>Ionic Menu Starter</h3>
-
-    <p>
-      If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-    </p>
-
-    <button ion-button secondary menuToggle>Toggle Menu</button>
+    <h2>User List</h2>
+    <ion-list>
+      <ion-item *ngFor="let user of users">
+        {{user.name}}
+      </ion-item>
+    </ion-list>
   </div>
 
 </ion-content>

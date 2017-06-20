@@ -7,10 +7,13 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Viagem } from '../pages/viagem/viagem';
 
+import { RestapiService } from '../providers/restapi-service';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { AgmCoreModule } from 'angular2-google-maps/core'
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core'
       apiKey: 'AIzaSyCbsO8OiXdTP6Jt1jWMgCCkigSiWSw3-Is'
     }),
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -36,6 +40,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core'
   providers: [
     StatusBar,
     SplashScreen,
+    RestapiService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
