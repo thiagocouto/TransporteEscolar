@@ -12,8 +12,8 @@ import 'rxjs/add/operator/map';
 export class RestapiService {
 
   data: any;
-  apiUrl = 'https://jsonplaceholder.typicode.com';
-  //apiUrl = 'http://localhost:8080/transporte/service/passageiro/listar';
+  //apiUrl = 'https://jsonplaceholder.typicode.com';
+  apiUrl = 'http://localhost:8080/transporte/service/passageiro/listar';
 
   constructor(public http: Http) {
     console.log('Hello RestapiService Provider');
@@ -25,7 +25,8 @@ export class RestapiService {
     }
 
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'/users')
+      //this.http.get(this.apiUrl+'/users')
+      this.http.get(this.apiUrl)
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;

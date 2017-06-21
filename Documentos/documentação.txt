@@ -1,5 +1,0 @@
-Ferramentas
-- StarUML
-
-Diagramas
-- Diagrama de Classes: TransporteEscolar.mdj

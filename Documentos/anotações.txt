@@ -1,0 +1,14 @@
+Ferramentas
+- StarUML
+
+Diagramas
+- Diagrama de Classes: TransporteEscolar.mdj
+
+Links:
+- Intergação com REST API
+    https://www.djamware.com/post/58b6e81980aca7432b5ff57a/ionic-2-consuming-rest-api
+- No 'Access-Control-Allow-Origin' header is present on the requested resource
+    http://blog.ionic.io/handling-cors-issues-in-ionic/
+    https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi/related?hl=en
+
+
