@@ -1,15 +1,19 @@
 package br.ufrn.transporte.model;
 
-public enum Turno {
+public enum DiaSemana {
 	
-	MANHA(1, "Manhã"),
-	TARDE(2, "Tarde"),
-	NOITE(3, "Noite");
+	DOMINGO(1, "Manhã"),
+	SEGUNDA(2, "Segunda"),
+	TERCA  (3, "Terça"),
+	QUARTA (4, "Quarta"),
+	QUINTA (5, "Quinta"),
+	SEXTA  (6, "Sexta"),
+	SABADO (7, "Sábado");
 	
 	private Integer codigo;
     private String descricao;
 
-    Turno(Integer codigo, String descricao) {
+    DiaSemana(Integer codigo, String descricao) {
         this.codigo = codigo;
         this.descricao = descricao;
     }
@@ -29,5 +33,4 @@ public enum Turno {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
 }
