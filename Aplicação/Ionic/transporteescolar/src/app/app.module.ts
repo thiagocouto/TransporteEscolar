@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { Passageiro } from '../pages/passageiro/passageiro';
 import { Viagem } from '../pages/viagem/viagem';
 
 import { RestapiService } from '../providers/restapi-service';
@@ -19,6 +20,7 @@ import { HttpModule } from '@angular/http';
   declarations: [
     MyApp,
     HomePage,
+    Passageiro,
     ListPage,
     Viagem
   ],
@@ -35,6 +37,7 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     ListPage,
+    Passageiro,
     Viagem
   ],
   providers: [

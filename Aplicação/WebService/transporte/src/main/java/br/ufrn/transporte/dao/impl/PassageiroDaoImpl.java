@@ -1,6 +1,5 @@
 package br.ufrn.transporte.dao.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import br.ufrn.transporte.dao.PassageiroDao;
@@ -13,6 +12,5 @@ public class PassageiroDaoImpl implements PassageiroDao{
 	public List<Passageiro> listarPassageiros() {
 		return PassageiroFactory.listarPassageiros();
 	}
-	
 	
 }

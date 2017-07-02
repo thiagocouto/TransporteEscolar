@@ -19,7 +19,7 @@ export class RestapiService {
     console.log('Hello RestapiService Provider');
   }
 
-  getUsers() {
+  getPassageiros() {
     if (this.data) {
       return Promise.resolve(this.data);
     }
