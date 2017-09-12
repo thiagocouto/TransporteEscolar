@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -13,7 +13,7 @@ export class RestapiService {
 
   data: any;
   //apiUrl = 'https://jsonplaceholder.typicode.com';
-  apiUrl = 'http://localhost:8080/transporte/service/passageiro/listar';
+  apiUrlPassageiro = 'http://localhost:8080/transporte/service/passageiro';
 
   constructor(public http: Http) {
     console.log('Hello RestapiService Provider');
@@ -26,7 +26,7 @@ export class RestapiService {
 
     return new Promise(resolve => {
       //this.http.get(this.apiUrl+'/users')
-      this.http.get(this.apiUrl)
+      this.http.get(this.apiUrlPassageiro)
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
@@ -36,9 +36,14 @@ export class RestapiService {
     });
   }
 
-  saveUser(data) {
+  savePassageiro(data) {
       return new Promise((resolve, reject) => {
-        this.http.post(this.apiUrl+'/users', JSON.stringify(data))
+        
+        let body = JSON.stringify(data);
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+        this.http.post(this.apiUrlPassageiro, body, options)
           .subscribe(res => {
             resolve(res);
           }, (err) => {

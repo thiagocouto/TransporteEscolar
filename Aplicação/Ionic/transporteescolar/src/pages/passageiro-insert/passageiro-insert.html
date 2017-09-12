@@ -1,0 +1,59 @@
+<!--
+  Generated template for the PassageiroInsert page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Inserir passageiro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="passageiro.nome"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Telefone</ion-label>
+      <ion-input type="tel" [(ngModel)]="passageiro.telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>E-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="passageiro.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Logradouro</ion-label>
+      <ion-input type="text" [(ngModel)]="passageiro.endereco.logradouro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Número</ion-label>
+      <ion-input type="text" [(ngModel)]="passageiro.endereco.numero"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Bairro</ion-label>
+      <ion-input type="text" [(ngModel)]="passageiro.endereco.bairro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Complemento</ion-label>
+      <ion-textarea type="text" [(ngModel)]="passageiro.endereco.complemento"></ion-textarea>
+    </ion-item>  
+  </ion-list>
+    
+  <div padding>
+    <button ion-button color="primary" block (click)="insertPassageiro()">Cadastrar Passageiro</button>
+  </div>
+
+</ion-content>

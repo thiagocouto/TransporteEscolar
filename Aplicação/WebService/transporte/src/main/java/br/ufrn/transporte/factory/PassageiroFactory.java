@@ -8,9 +8,9 @@ import br.ufrn.transporte.model.Passageiro;
 
 public class PassageiroFactory {
 	
-	public static List<Passageiro> listarPassageiros(){
-		List<Passageiro> listPassageiro = new ArrayList<Passageiro>();
-		
+	private static List<Passageiro> listPassageiro = new ArrayList<Passageiro>();
+	
+	static {
 		Endereco endereco = new Endereco();
 		endereco.setBairro("Ponto Novo");
 		endereco.setLogradouro("Rua Arnaldo Pereira Souza");
@@ -29,7 +29,18 @@ public class PassageiroFactory {
 		passageiro2.setEndereco(endereco);
 		
 		listPassageiro.add(passageiro);
-		listPassageiro.add(passageiro2);
+		listPassageiro.add(passageiro2);		
+	}
+	
+	
+	public static void inserirPassageiro(Passageiro passageiro) {
+		listPassageiro.add(passageiro);
+	}
+	
+	public static List<Passageiro> listarPassageiros(){
 		return listPassageiro;
 	}
+
+
+
 }

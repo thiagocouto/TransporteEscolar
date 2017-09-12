@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Passageiro } from '../pages/passageiro/passageiro';
+import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
 import { Viagem } from '../pages/viagem/viagem';
 
 import { RestapiService } from '../providers/restapi-service';
@@ -21,6 +22,7 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     Passageiro,
+    PassageiroInsert,
     ListPage,
     Viagem
   ],
@@ -38,6 +40,7 @@ import { HttpModule } from '@angular/http';
     HomePage,
     ListPage,
     Passageiro,
+    PassageiroInsert,
     Viagem
   ],
   providers: [

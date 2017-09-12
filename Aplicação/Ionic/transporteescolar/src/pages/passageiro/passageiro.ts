@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { RestapiService } from '../../providers/restapi-service';
 
+import { PassageiroInsert} from '../passageiro-insert/passageiro-insert';
+
 /**
  * Generated class for the Passageiro page.
  *
@@ -16,7 +18,7 @@ import { RestapiService } from '../../providers/restapi-service';
 export class Passageiro {
 
   passageiros: any;
-
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, public restapiService: RestapiService) {
     this.getPassageiros();
   }
@@ -31,6 +33,10 @@ export class Passageiro {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Passageiro');
+  }
+
+  openPageInsertPassageiro(){
+    this.navCtrl.push(PassageiroInsert);
   }
 
 }
