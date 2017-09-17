@@ -14,6 +14,8 @@ public class Passageiro {
 	
 	private String telefone;
 	
+	private Turno turno;
+	
 	public Passageiro() {}
 	
 //	public Passageiro(Agenda agenda, Contrato contrato, String email,
@@ -28,12 +30,13 @@ public class Passageiro {
 //	}
 	
 	public Passageiro(String email,
-			Endereco endereco, String nome, String telefone) {
+			Endereco endereco, String nome, String telefone, Turno turno) {
 		super();
 		this.email = email;
 		this.endereco = endereco;
 		this.nome = nome;
 		this.telefone = telefone;
+		this.turno = turno;
 	}
 
 //	public Agenda getAgenda() {
@@ -82,6 +85,14 @@ public class Passageiro {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+
+	public Turno getTurno() {
+		return turno;
+	}
+
+	public void setTurno(Turno turno) {
+		this.turno = turno;
 	}
 
 }

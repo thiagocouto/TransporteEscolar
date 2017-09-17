@@ -10,6 +10,7 @@ import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
 import { Viagem } from '../pages/viagem/viagem';
 
 import { RestapiService } from '../providers/restapi-service';
+import { RestapiServiceHorario } from '../providers/restapi-serviceHorario';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -47,6 +48,7 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     RestapiService,
+    RestapiServiceHorario,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

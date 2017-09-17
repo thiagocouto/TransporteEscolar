@@ -1,6 +1,5 @@
 package br.ufrn.transporte.services;
 
-import java.io.InputStream;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
