@@ -29,5 +29,5 @@ public enum Turno {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
+	
 }

@@ -1,5 +1,13 @@
 package br.ufrn.transporte.model;
 
-public class Contrato {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
+public class Contrato {
+	
+	@Id
+	@GeneratedValue
+	private Long id;
 }

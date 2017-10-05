@@ -29,7 +29,60 @@ export class PassageiroInsert {
   horariosQuintaVolta: any;
   horariosSextaVolta: any;
 
-  passageiro = {email: '',
+  passageiro = {agenda: {horarios: [
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     },
+                                     {diaSemana: '',
+                                      hora: '',
+                                      tipoHorario: '',
+                                      turno: ''
+                                     }
+                                   ]
+                        },
+                email: '',
                 endereco: {bairro: '',
                            complemento: '',
                            localizacao : {latitude: '',
@@ -42,6 +95,11 @@ export class PassageiroInsert {
                 telefone: '',
                 turno: ''
                };
+  
+  turnos = [{valor: 'MANHA', descricao: 'Manhã'},
+            {valor: 'TARDE', descricao: 'Tarde'},
+            {valor: 'NOITE', descricao: 'Noite'}
+           ];       
 
   constructor(
     public navCtrl: NavController, 
@@ -135,8 +193,6 @@ export class PassageiroInsert {
   }
 
   insertPassageiro(){
-    console.log('nome: ' + this.passageiro.nome);
-    console.log('turno: ' + this.passageiro.turno);
     this.restapiService.savePassageiro(this.passageiro).then((result) => {
       console.log(result);
     }, (err) => {

@@ -2,7 +2,7 @@ package br.ufrn.transporte.model;
 
 public class Passageiro {
 	
-	//private Agenda agenda;
+	private Agenda agenda;
 	
 	//private Contrato contrato;
 	
@@ -29,9 +29,10 @@ public class Passageiro {
 //		this.telefone = telefone;
 //	}
 	
-	public Passageiro(String email,
-			Endereco endereco, String nome, String telefone, Turno turno) {
+	public Passageiro(Agenda agenda, String email, Endereco endereco,
+			String nome, String telefone, Turno turno) {
 		super();
+		this.agenda = agenda;
 		this.email = email;
 		this.endereco = endereco;
 		this.nome = nome;
@@ -39,14 +40,14 @@ public class Passageiro {
 		this.turno = turno;
 	}
 
-//	public Agenda getAgenda() {
-//		return agenda;
-//	}
-//
-//	public void setAgenda(Agenda agenda) {
-//		this.agenda = agenda;
-//	}
-//
+	public Agenda getAgenda() {
+		return agenda;
+	}
+
+	public void setAgenda(Agenda agenda) {
+		this.agenda = agenda;
+	}
+
 //	public Contrato getContrato() {
 //		return contrato;
 //	}
