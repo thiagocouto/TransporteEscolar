@@ -7,8 +7,6 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Passageiro } from '../pages/passageiro/passageiro';
 import { Viagem } from '../pages/viagem/viagem';
-import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
-
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +14,7 @@ import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = PassageiroInsert;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 

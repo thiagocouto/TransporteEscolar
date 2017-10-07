@@ -1,9 +1,15 @@
 package br.ufrn.transporte.model;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Localizacao {
 	
+	@Column(name="tx_latitude")
 	private String latitude;
 	
+	@Column(name="tx_longitude")
 	private String longitude;
 	
 	public Localizacao() {}

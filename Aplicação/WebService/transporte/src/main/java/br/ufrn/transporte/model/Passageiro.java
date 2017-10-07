@@ -1,19 +1,44 @@
 package br.ufrn.transporte.model;
 
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_passageiro")
 public class Passageiro {
 	
+	@Id
+	@GeneratedValue
+	@Column(name="id_passageiro")
+	private Long id;
+	
+	@OneToOne
+	@JoinColumn(name = "id_agenda")
 	private Agenda agenda;
 	
 	//private Contrato contrato;
 	
+	@Column(name="tx_email")
 	private String email;
 	
+	@Embedded
 	private Endereco endereco;
 	
+	@Column(name="tx_nome")
 	private String nome;
 	
+	@Column(name="tx_telefone")
 	private String telefone;
 	
+	@Enumerated
+	@Column(name="lt_turno")
 	private Turno turno;
 	
 	public Passageiro() {}

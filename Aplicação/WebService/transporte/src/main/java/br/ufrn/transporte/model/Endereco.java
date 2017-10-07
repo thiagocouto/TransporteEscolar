@@ -1,15 +1,25 @@
 package br.ufrn.transporte.model;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
+
+@Embeddable
 public class Endereco {
 	
+	@Column(name="tx_bairro")
 	private String bairro;
 	
+	@Column(name="tx_complemento")
 	private String complemento;
 	
+	@Embedded
 	private Localizacao localizacao;
 	
+	@Column(name="tx_logradouro")
 	private String logradouro;
 	
+	@Column(name="tx_numero")
 	private String numero;
 	
 	public Endereco(){};
@@ -22,7 +32,7 @@ public class Endereco {
 		this.logradouro = logradouro;
 		this.numero = numero;
 	}
-
+	
 	public String getBairro() {
 		return bairro;
 	}

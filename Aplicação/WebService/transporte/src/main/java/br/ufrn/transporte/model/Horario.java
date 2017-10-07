@@ -1,13 +1,34 @@
 package br.ufrn.transporte.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_horario")
 public class Horario {
 	
+	@Id
+    @Column(name="id_horario")
+	@GeneratedValue
+	private Long id;
+	
+	@Enumerated
+	@Column(name="lt_diaSemana")
 	private DiaSemana diaSemana;
 	
+	@Column(name="tx_hora")
 	private String hora;
 	
+	@Enumerated
+	@Column(name="lt_tipoHorario")
 	private TipoHorario tipoHorario;
 	
+	@Enumerated
+	@Column(name="lt_turno")
 	private Turno turno;
 	
 	public Horario() {}
