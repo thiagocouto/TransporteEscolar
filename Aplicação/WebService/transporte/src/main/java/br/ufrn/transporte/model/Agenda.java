@@ -2,8 +2,10 @@ package br.ufrn.transporte.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
@@ -20,7 +22,7 @@ public class Agenda {
 	@GeneratedValue
 	private Long id;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL , fetch = FetchType.EAGER)
     @JoinTable(name="tb_agenda_horario", 
     joinColumns= {@ JoinColumn(name="id_agenda")}, 
     inverseJoinColumns= {@JoinColumn(name="id_horario")})

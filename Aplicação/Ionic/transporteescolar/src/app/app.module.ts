@@ -6,8 +6,12 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Passageiro } from '../pages/passageiro/passageiro';
+import { PassageiroDetail } from '../pages/passageiro-detail/passageiro-detail';
 import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
 import { Viagem } from '../pages/viagem/viagem';
+
+import { PassageiroDetailsComponent } from '../components/passageiro-details.component';
+import { PassageiroFormComponent } from '../components/passageiro-form.component';
 
 import { RestapiService } from '../providers/restapi-service';
 import { RestapiServiceHorario } from '../providers/restapi-serviceHorario';
@@ -23,6 +27,9 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     Passageiro,
+    PassageiroDetail,
+    PassageiroDetailsComponent,
+    PassageiroFormComponent,
     PassageiroInsert,
     ListPage,
     Viagem
@@ -41,6 +48,7 @@ import { HttpModule } from '@angular/http';
     HomePage,
     ListPage,
     Passageiro,
+    PassageiroDetail,
     PassageiroInsert,
     Viagem
   ],

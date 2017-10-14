@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { RestapiService } from '../../providers/restapi-service';
 
+import { PassageiroDetail} from '../passageiro-detail/passageiro-detail';
 import { PassageiroInsert} from '../passageiro-insert/passageiro-insert';
 
 /**
@@ -39,4 +40,9 @@ export class Passageiro {
     this.navCtrl.push(PassageiroInsert);
   }
 
+  itemTapped(event, passageiro){
+    this.navCtrl.push(PassageiroDetail, {
+      passageiro: passageiro
+    });
+  }
 }

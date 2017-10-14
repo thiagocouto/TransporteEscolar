@@ -1,9 +1,11 @@
 package br.ufrn.transporte.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -19,7 +21,7 @@ public class Passageiro {
 	@Column(name="id_passageiro")
 	private Long id;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL , fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_agenda")
 	private Agenda agenda;
 	

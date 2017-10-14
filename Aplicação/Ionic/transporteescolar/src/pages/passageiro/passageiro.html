@@ -18,11 +18,11 @@
 
 <ion-content>
    <ion-list>
-    <ion-item *ngFor="let passageiro of passageiros">
+    <button ion-item *ngFor="let passageiro of passageiros" (click)="itemTapped($event, passageiro)">
       <h2>{{passageiro.nome}}</h2>
       <p>{{passageiro.telefone}}</p>
       <p>{{passageiro.email}}</p>
-    </ion-item>
+    </button>
   </ion-list>
 
   <ion-fab right bottom>

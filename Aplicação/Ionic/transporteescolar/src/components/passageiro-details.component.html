@@ -1,0 +1,53 @@
+<ion-list>
+    <ion-item>
+        <b>Turno</b>
+        <div>
+        {{passageiro.turno}}
+        </div>
+    </ion-item>
+    <ion-item>
+        <b>Dados Pessoais</b>
+        <div>
+        Nome: {{passageiro.nome}}
+        </div>
+        <div>
+        Telefone: {{passageiro.telefone}}
+        </div>
+        <div>
+        E-mail: {{passageiro.email}}
+        </div>
+    </ion-item>
+    <ion-item>
+        <b>Endereço</b>
+        <div>
+        Logradouro: {{passageiro.endereco.logradouro}}
+        </div>
+        <div>
+        Número: {{passageiro.endereco.numero}}
+        </div>
+        <div>
+        Bairro: {{passageiro.endereco.bairro}}
+        </div>
+        <div>
+        Complemento: {{passageiro.endereco.complemento}}
+        </div>
+    </ion-item>
+    <ion-item>
+        <b>Horários</b>
+        <div>
+        Segunda: {{passageiro.agenda.horarios[0].hora}} | {{passageiro.agenda.horarios[1].hora}}
+        </div>
+        <div>
+        Terça: {{passageiro.agenda.horarios[2].hora}} | {{passageiro.agenda.horarios[3].hora}}
+        </div>
+        <div>
+        Quarta: {{passageiro.agenda.horarios[4].hora}} | {{passageiro.agenda.horarios[5].hora}}
+        </div>
+        <div>
+        Quinta: {{passageiro.agenda.horarios[6].hora}} | {{passageiro.agenda.horarios[7].hora}}
+        </div>
+        <div>
+        Sexta: {{passageiro.agenda.horarios[8].hora}} | {{passageiro.agenda.horarios[9].hora}}
+        </div>
+    </ion-item>
+</ion-list>
