@@ -12,6 +12,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity
 @Table(name="tb_agenda")
@@ -28,6 +29,10 @@ public class Agenda {
     inverseJoinColumns= {@JoinColumn(name="id_horario")})
 	private List<Horario> horarios;
 	
+	@Version
+	@Column(name="id_versao")
+	private Integer version;
+	
 	public Agenda(){};
 	
 	public Agenda(List<Horario> horarios) {
@@ -41,6 +46,14 @@ public class Agenda {
 
 	public void setHorarios(List<Horario> horarios) {
 		this.horarios = horarios;
+	}
+
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
 	}
 	
 }

@@ -13,7 +13,7 @@ export class RestapiService {
 
   data: any;
   apiUrlPassageiro = 'http://localhost:8080/transporte/service/passageiro';
-  
+
   constructor(public http: Http) {
     console.log('Hello RestapiService Provider');
   }
@@ -37,19 +37,35 @@ export class RestapiService {
   }
 
   savePassageiro(data) {
-      return new Promise((resolve, reject) => {
-        
-        let body = JSON.stringify(data);
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
+    return new Promise((resolve, reject) => {
 
-        this.http.post(this.apiUrlPassageiro, body, options)
-          .subscribe(res => {
-            resolve(res);
-          }, (err) => {
-            reject(err);
-          });
-      });
+      let body = JSON.stringify(data);
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+
+      this.http.post(this.apiUrlPassageiro, body, options)
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
+  updatePassageiro(data) {
+    return new Promise((resolve, reject) => {
+
+      let body = JSON.stringify(data);
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+
+      this.http.put(this.apiUrlPassageiro, body, options)
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          reject(err);
+        });
+    });
   }
 
 }

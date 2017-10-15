@@ -15,7 +15,6 @@
 
 <ion-content padding>
   <ion-slides pager>
-
     <ion-slide>
       <component-passageiro-formTurno [passageiro]="passageiro"></component-passageiro-formTurno>
     </ion-slide>
@@ -34,12 +33,9 @@
 
     <ion-slide>
       <component-passageiro-details [passageiro]="passageiro"></component-passageiro-details>
-      <!--
       <div padding>
-        <button ion-button color="primary" block (click)="confirmarInclusaoPassageiro()">Cadastrar Passageiro</button>
+        <button ion-button color="primary" block (click)="confirmarAlteracaoPassageiro()">Atualizar passageiro</button>
       </div>
-      -->
     </ion-slide>
-
   </ion-slides>
 </ion-content>

@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity
 @Table(name="tb_passageiro")
@@ -43,6 +44,10 @@ public class Passageiro {
 	@Column(name="lt_turno")
 	private Turno turno;
 	
+	@Version
+	@Column(name="id_versao")
+	private Integer version;
+	
 	public Passageiro() {}
 	
 //	public Passageiro(Agenda agenda, Contrato contrato, String email,
@@ -56,15 +61,24 @@ public class Passageiro {
 //		this.telefone = telefone;
 //	}
 	
-	public Passageiro(Agenda agenda, String email, Endereco endereco,
+	public Passageiro(Long id, Agenda agenda, String email, Endereco endereco,
 			String nome, String telefone, Turno turno) {
 		super();
+		this.id = id;
 		this.agenda = agenda;
 		this.email = email;
 		this.endereco = endereco;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.turno = turno;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Agenda getAgenda() {
@@ -121,6 +135,14 @@ public class Passageiro {
 
 	public void setTurno(Turno turno) {
 		this.turno = turno;
+	}
+	
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
 	}
 
 }

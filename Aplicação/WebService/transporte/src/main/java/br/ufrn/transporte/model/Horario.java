@@ -6,6 +6,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity
 @Table(name="tb_horario")
@@ -30,6 +31,10 @@ public class Horario {
 	@Enumerated
 	@Column(name="lt_turno")
 	private Turno turno;
+	
+	@Version
+	@Column(name="id_versao")
+	private Integer version;
 	
 	public Horario() {}
 	
@@ -74,4 +79,12 @@ public class Horario {
 		this.turno = turno;
 	}
 	
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
 }

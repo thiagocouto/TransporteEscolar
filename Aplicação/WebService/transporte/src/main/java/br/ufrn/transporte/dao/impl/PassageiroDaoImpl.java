@@ -20,7 +20,8 @@ public class PassageiroDaoImpl extends BaseDaoImpl<Passageiro> implements Passag
 	
 	@Override
 	public List<Passageiro> listarPassageiros() {
-		String hql = "SELECT p FROM Passageiro p";
+		String hql = "SELECT p FROM Passageiro p "
+				   + "ORDER BY p.nome";
 		TypedQuery<Passageiro> query = em.createQuery(hql, Passageiro.class);
 		return query.getResultList();
 	}
