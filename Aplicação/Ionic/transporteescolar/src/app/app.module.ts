@@ -11,7 +11,10 @@ import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
 import { Viagem } from '../pages/viagem/viagem';
 
 import { PassageiroDetailsComponent } from '../components/passageiro-details.component';
-import { PassageiroFormComponent } from '../components/passageiro-form.component';
+import { PassageiroFormDadosPessoaisComponent } from '../components/passageiro-formDadosPessoais.component';
+import { PassageiroFormEnderecoComponent } from '../components/passageiro-formEndereco.component';
+import { PassageiroFormHorarioComponent } from '../components/passageiro-formHorario.component';
+import { PassageiroFormTurnoComponent } from '../components/passageiro-formTurno.component';
 
 import { RestapiService } from '../providers/restapi-service';
 import { RestapiServiceHorario } from '../providers/restapi-serviceHorario';
@@ -29,7 +32,10 @@ import { HttpModule } from '@angular/http';
     Passageiro,
     PassageiroDetail,
     PassageiroDetailsComponent,
-    PassageiroFormComponent,
+    PassageiroFormDadosPessoaisComponent,
+    PassageiroFormEnderecoComponent,
+    PassageiroFormHorarioComponent,
+    PassageiroFormTurnoComponent,
     PassageiroInsert,
     ListPage,
     Viagem

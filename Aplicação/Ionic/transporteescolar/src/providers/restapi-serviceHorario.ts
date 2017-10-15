@@ -30,6 +30,7 @@ export class RestapiServiceHorario {
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
+          console.log("resposta: " + url);
         });
     });  
   }

@@ -1,11 +1,12 @@
 import {Component, Input} from "@angular/core"
 
 @Component({
-    selector: 'component-passageiro-form',
-    templateUrl: 'passageiro-form.component.html',
+    selector: 'component-passageiro-formDadosPessoais',
+    templateUrl: 'passageiro-formDadosPessoais.component.html',
 })
 
-export class PassageiroFormComponent{
+export class PassageiroFormDadosPessoaisComponent{   
+
     _passageiro: any;
 
     @Input()

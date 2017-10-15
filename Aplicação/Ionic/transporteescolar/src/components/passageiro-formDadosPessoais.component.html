@@ -1,0 +1,191 @@
+<ion-item>
+    <ion-label><b> Dados Pessoais</b></ion-label>
+</ion-item>
+
+<ion-list>
+    <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="passageiro.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Telefone</ion-label>
+        <ion-input type="tel" [(ngModel)]="passageiro.telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="passageiro.email"></ion-input>
+    </ion-item>
+</ion-list>            
+<!--
+<ion-slide>
+    <ion-item>
+    <ion-label><b>Endereço</b></ion-label>
+    </ion-item>
+
+    <ion-list>
+        
+    <ion-item>
+        <ion-label floating>Logradouro</ion-label>
+        <ion-input type="text" [(ngModel)]="passageiro.endereco.logradouro"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label floating>Número</ion-label>
+        <ion-input type="text" [(ngModel)]="passageiro.endereco.numero"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label floating>Bairro</ion-label>
+        <ion-input type="text" [(ngModel)]="passageiro.endereco.bairro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Complemento</ion-label>
+        <ion-textarea type="text" [(ngModel)]="passageiro.endereco.complemento"></ion-textarea>
+    </ion-item>  
+    
+    </ion-list>
+</ion-slide>
+
+<ion-slide>
+    <ion-item>
+    <ion-label><b>Horários</b></ion-label>
+    </ion-item>
+    
+    <ion-list>
+    <ion-grid>
+        <ion-row>
+        <ion-col>
+            <ion-label>Segunda</ion-label>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Ida</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[0]" interface="popover">
+                <ion-option *ngFor="let horario of horariosSegundaIda" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>  
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Volta</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[1]" interface="popover">
+                <ion-option *ngFor="let horario of horariosSegundaVolta" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>       
+        </ion-col>
+        </ion-row>
+
+        <ion-row>
+        <ion-col>
+            <ion-label>Terça</ion-label>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Ida</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[2]" interface="popover">
+                <ion-option *ngFor="let horario of horariosTercaIda" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>  
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Volta</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[3]" interface="popover">
+                <ion-option *ngFor="let horario of horariosTercaVolta" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>       
+        </ion-col>
+        </ion-row>
+
+        <ion-row>
+        <ion-col>
+            <ion-label>Quarta</ion-label>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Ida</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[4]" interface="popover">
+                <ion-option *ngFor="let horario of horariosQuartaIda" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>  
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Volta</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[5]" interface="popover">
+                <ion-option *ngFor="let horario of horariosQuartaVolta" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>       
+        </ion-col>
+        </ion-row>
+
+        <ion-row>
+        <ion-col>
+            <ion-label>Quinta</ion-label>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Ida</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[6]" interface="popover">
+                <ion-option *ngFor="let horario of horariosQuintaIda" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>  
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Volta</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[7]" interface="popover">
+                <ion-option *ngFor="let horario of horariosQuintaVolta" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>       
+        </ion-col>
+        </ion-row>
+
+        <ion-row>
+        <ion-col>
+            <ion-label>Sexta</ion-label>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Ida</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[8]" interface="popover">
+                <ion-option *ngFor="let horario of horariosSextaIda" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>  
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col>
+            <ion-item>
+            <ion-label>Volta</ion-label>
+            <ion-select [(ngModel)]="passageiro.agenda.horarios[9]" interface="popover">
+                <ion-option *ngFor="let horario of horariosSextaVolta" [value]="horario">{{horario.hora}}</ion-option>
+            </ion-select>          
+            </ion-item>       
+        </ion-col>
+        </ion-row>
+    </ion-grid>
+    </ion-list>
+</ion-slide>  
+-->
