@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Passageiro } from '../pages/passageiro/passageiro';
+import { PassageiroChange } from '../pages/passageiro-change/passageiro-change';
 import { PassageiroDetail } from '../pages/passageiro-detail/passageiro-detail';
 import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
 import { Viagem } from '../pages/viagem/viagem';
@@ -30,6 +31,7 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     Passageiro,
+    PassageiroChange,
     PassageiroDetail,
     PassageiroDetailsComponent,
     PassageiroFormDadosPessoaisComponent,
@@ -54,6 +56,7 @@ import { HttpModule } from '@angular/http';
     HomePage,
     ListPage,
     Passageiro,
+    PassageiroChange,
     PassageiroDetail,
     PassageiroInsert,
     Viagem

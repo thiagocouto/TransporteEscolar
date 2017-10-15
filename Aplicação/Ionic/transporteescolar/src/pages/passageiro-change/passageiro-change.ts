@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { PassageiroChange} from '../passageiro-change/passageiro-change';
-
 /**
- * Generated class for the PassageiroDetail page.
+ * Generated class for the PassageiroChange page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-passageiro-detail',
-  templateUrl: 'passageiro-detail.html',
+  selector: 'page-passageiro-change',
+  templateUrl: 'passageiro-change.html',
 })
-export class PassageiroDetail {
+export class PassageiroChange {
 
   passageiro: any;
 
@@ -23,12 +21,7 @@ export class PassageiroDetail {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PassageiroDetail');
+    console.log('ionViewDidLoad PassageiroChange');
   }
 
-  openPageChangePassageiro() {
-    this.navCtrl.push(PassageiroChange, {
-      passageiro: this.passageiro
-    });
-  }
 }

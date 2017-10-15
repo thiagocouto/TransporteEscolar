@@ -5,14 +5,16 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>Detalhar passageiro</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
   <component-passageiro-details [passageiro]="passageiro"></component-passageiro-details>
+  <ion-fab right bottom>
+    <button ion-fab (click)="openPageChangePassageiro()">
+      <ion-icon name="create"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

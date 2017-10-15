@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { RestapiService } from '../../providers/restapi-service';
 
@@ -16,89 +16,140 @@ import { RestapiService } from '../../providers/restapi-service';
 })
 export class PassageiroInsert {
 
-  passageiro = {agenda: {horarios: [
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     },
-                                     {diaSemana: '',
-                                      hora: '',
-                                      tipoHorario: '',
-                                      turno: ''
-                                     }
-                                   ]
-                        },
-                email: '',
-                endereco: {bairro: '',
-                           complemento: '',
-                           localizacao : {latitude: '',
-                                          longitude: ''
-                                         },
-                           logradouro: '',
-                           numero: ''
-                          },
-                nome: '',
-                telefone: '',
-                turno: ''
-               };
+  passageiro = {
+    agenda: {
+      horarios: [
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        },
+        {
+          diaSemana: '',
+          hora: '',
+          tipoHorario: '',
+          turno: ''
+        }
+      ]
+    },
+    email: '',
+    endereco: {
+      bairro: '',
+      complemento: '',
+      localizacao: {
+        latitude: '',
+        longitude: ''
+      },
+      logradouro: '',
+      numero: ''
+    },
+    nome: '',
+    telefone: '',
+    turno: ''
+  };
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
+    public alertCtrl: AlertController,
+    public navCtrl: NavController,
+    public navParams: NavParams,
     public restapiService: RestapiService) {
   }
-  
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad PassageiroInsert');
   }
 
-  insertPassageiro(){
+  confirmarInclusaoPassageiro() {
+    let confirm = this.alertCtrl.create({
+      title: 'Incluir passageiro?',
+      message: 'Deseja confirmar a inclusão do passageiro?',
+      buttons: [
+        {
+          text: 'Sim',
+          handler: () => {
+            this.insertPassageiro();
+          }
+        },
+        {
+          text: 'Cancelar',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  insertPassageiro() {
     this.restapiService.savePassageiro(this.passageiro).then((result) => {
-      console.log(result);
+      this.showAlertInclusao();
+      this.closePage();
     }, (err) => {
       console.log(err);
     });
+  }
+
+  showAlertInclusao() {
+    let alert = this.alertCtrl.create({
+      title: 'Incluir passageiro',
+      subTitle: 'Passageiro incluído com sucesso!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
+  closePage(){
+    this.navCtrl.pop();
   }
 
 }

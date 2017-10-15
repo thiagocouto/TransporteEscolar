@@ -21,16 +21,11 @@ export class RestapiServiceHorario {
   getHorariosDiaSemanaTipoHorario(diaSemana, tipoHorario){
 
     return new Promise(resolve => {
-
       let url = this.apiUrlHorario + "?diaSemana=" + diaSemana + "&tipoHorario=" + tipoHorario;
-
-      console.log("url: " + url);
-
       this.http.get(url)
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
-          console.log("resposta: " + url);
         });
     });  
   }

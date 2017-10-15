@@ -19,9 +19,11 @@ export class RestapiService {
   }
 
   getPassageiros() {
+    /**
     if (this.data) {
       return Promise.resolve(this.data);
     }
+     */
 
     return new Promise(resolve => {
       this.http.get(this.apiUrlPassageiro)

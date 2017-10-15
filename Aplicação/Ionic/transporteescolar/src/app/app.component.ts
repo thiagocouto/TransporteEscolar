@@ -14,7 +14,7 @@ import { Viagem } from '../pages/viagem/viagem';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = Passageiro;
 
   pages: Array<{title: string, component: any}>;
 

@@ -12,6 +12,13 @@ public interface PassageiroDao {
 	void inserirPassageiro(Passageiro passageiro);
 	
 	/**
+	 * Atualiza um passageiro
+	 * 
+	 * @param passageiro
+	 */
+	void atualizarPassageiro(Passageiro passageiro);
+	
+	/**
 	 * Lista os passageiros
 	 * 
 	 * @return Lista de passageiros

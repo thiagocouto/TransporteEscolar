@@ -14,4 +14,10 @@ public class BaseDaoImpl<T> {
 		em.getTransaction().commit();
 	}
 	
+	protected void update(T entity) {
+		em.getTransaction().begin();
+		em.merge(entity);
+		em.getTransaction().commit();
+	}
+	
 }

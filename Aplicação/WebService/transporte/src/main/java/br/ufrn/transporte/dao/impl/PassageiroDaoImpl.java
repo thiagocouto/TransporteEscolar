@@ -5,11 +5,14 @@ import java.util.List;
 import javax.persistence.TypedQuery;
 
 import br.ufrn.transporte.dao.PassageiroDao;
-import br.ufrn.transporte.factory.PassageiroFactory;
 import br.ufrn.transporte.model.Passageiro;
 
 public class PassageiroDaoImpl extends BaseDaoImpl<Passageiro> implements PassageiroDao{
 	
+	@Override
+	public void atualizarPassageiro(Passageiro passageiro) {
+		this.update(passageiro);
+	}
 	@Override
 	public void inserirPassageiro(Passageiro passageiro) {
 		this.insert(passageiro);
@@ -23,12 +26,4 @@ public class PassageiroDaoImpl extends BaseDaoImpl<Passageiro> implements Passag
 	}
 	
 	
-	public static void main(String[] args) {
-		PassageiroDao passageiroDao = new PassageiroDaoImpl();
-
-		List<Passageiro> passageiros = PassageiroFactory.listarPassageiros();
-		for (Passageiro passageiro : passageiros) {
-			passageiroDao.inserirPassageiro(passageiro);
-		}
-	}
 }

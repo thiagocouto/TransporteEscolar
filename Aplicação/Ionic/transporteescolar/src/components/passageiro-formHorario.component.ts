@@ -49,7 +49,6 @@ export class PassageiroFormHorarioComponent {
         this.restapiServiceHorario.getHorariosDiaSemanaTipoHorario('SEGUNDA', 'IDA')
             .then(data => {
                 this._horariosSegundaIda = data;
-                console.log("resposta: " + this._horariosSegundaIda);
             });
     }
 
