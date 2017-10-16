@@ -1,11 +1,11 @@
-package br.ufrn.transporte.dao;
+package br.ufrn.transporte.service;
 
 import java.util.List;
 
 import br.ufrn.transporte.model.Horario;
 import br.ufrn.transporte.model.Passageiro;
 
-public interface PassageiroDao {
+public interface PassageiroService {
 	
 	/**
 	 * Insere um passageiro

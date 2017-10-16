@@ -1,4 +1,4 @@
-package br.ufrn.transporte.services;
+package br.ufrn.transporte.webServices;
 
 import java.util.List;
 

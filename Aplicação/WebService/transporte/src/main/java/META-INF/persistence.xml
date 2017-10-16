@@ -13,6 +13,7 @@
 		<class>br.ufrn.transporte.model.Horario</class>
 		<class>br.ufrn.transporte.model.Localizacao</class>
 		<class>br.ufrn.transporte.model.Passageiro</class>
+		<class>br.ufrn.transporte.model.Viagem</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/transporteEscolar" />

@@ -1,4 +1,4 @@
-package br.ufrn.transporte.dao;
+package br.ufrn.transporte.service;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import br.ufrn.transporte.model.DiaSemana;
 import br.ufrn.transporte.model.Horario;
 import br.ufrn.transporte.model.TipoHorario;
 
-public interface HorarioDao {
+public interface HorarioService {
 	
 	/**
 	 * Lista os horários por Dia da Semana.

@@ -1,14 +1,17 @@
 package br.ufrn.transporte.model;
 
+import java.time.DayOfWeek;
+import java.util.Calendar;
+
 public enum DiaSemana {
 	
-	DOMINGO(1, "Manhã"),
-	SEGUNDA(2, "Segunda"),
-	TERCA  (3, "Terça"),
-	QUARTA (4, "Quarta"),
-	QUINTA (5, "Quinta"),
-	SEXTA  (6, "Sexta"),
-	SABADO (7, "Sábado");
+	DOMINGO(Calendar.SUNDAY, "Domingo"),
+	SEGUNDA(Calendar.MONDAY, "Segunda"),
+	TERCA  (Calendar.TUESDAY, "Terça"),
+	QUARTA (Calendar.WEDNESDAY, "Quarta"),
+	QUINTA (Calendar.THURSDAY, "Quinta"),
+	SEXTA  (Calendar.FRIDAY, "Sexta"),
+	SABADO (Calendar.SATURDAY, "Sábado");
 	
 	private Integer codigo;
     private String descricao;
@@ -32,5 +35,26 @@ public enum DiaSemana {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	
+	static public DiaSemana convertDayOfWeekToDiaSemana(DayOfWeek dayWeek){
+		switch (dayWeek) {
+		case SUNDAY:
+			return DOMINGO;
+		case MONDAY:
+			return SEGUNDA;
+		case TUESDAY:
+			return TERCA;
+		case WEDNESDAY:
+			return QUARTA;
+		case THURSDAY:
+			return QUINTA;
+		case FRIDAY:
+			return SEXTA;
+		case SATURDAY:
+			return SABADO;
+		default:
+			return null;
+		}
 	}
 }

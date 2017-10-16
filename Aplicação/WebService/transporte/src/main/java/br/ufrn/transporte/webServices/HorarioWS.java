@@ -1,4 +1,4 @@
-package br.ufrn.transporte.services;
+package br.ufrn.transporte.webServices;
 
 import java.util.List;
 
@@ -8,21 +8,21 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import br.ufrn.transporte.dao.HorarioDao;
-import br.ufrn.transporte.dao.impl.HorarioDaoImpl;
 import br.ufrn.transporte.model.DiaSemana;
 import br.ufrn.transporte.model.Horario;
 import br.ufrn.transporte.model.TipoHorario;
+import br.ufrn.transporte.service.HorarioService;
+import br.ufrn.transporte.service.impl.HorarioServiceImpl;
 
 
 @Path("horario") 
 public class HorarioWS {
 	
-	private HorarioDao horarioDao;
+	private HorarioService horarioService;
 	
 	public HorarioWS() {
 		super();
-		this.horarioDao = new HorarioDaoImpl();
+		this.horarioService = new HorarioServiceImpl();
 	}
 	
 	@GET
@@ -30,8 +30,7 @@ public class HorarioWS {
 	public List<Horario> listarHorariosDiaSemanaTipoHorario(
 			@QueryParam("diaSemana") DiaSemana diaSemana, 
 			@QueryParam("tipoHorario") TipoHorario tipoHorario) {
-		return horarioDao.listarHorariosDiaSemanaTipoHorario(diaSemana, tipoHorario);
+		return horarioService.listarHorariosDiaSemanaTipoHorario(diaSemana, tipoHorario);
 	}
-	
 	
 }

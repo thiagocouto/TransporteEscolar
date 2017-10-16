@@ -19,6 +19,7 @@ import { PassageiroFormTurnoComponent } from '../components/passageiro-formTurno
 
 import { RestapiService } from '../providers/restapi-service';
 import { RestapiServiceHorario } from '../providers/restapi-serviceHorario';
+import { RestapiServiceViagem } from '../providers/restapi-serviceViagem';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -66,6 +67,7 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     RestapiService,
     RestapiServiceHorario,
+    RestapiServiceViagem,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

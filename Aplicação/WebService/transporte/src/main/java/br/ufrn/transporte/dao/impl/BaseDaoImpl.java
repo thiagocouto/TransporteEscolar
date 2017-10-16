@@ -1,5 +1,7 @@
 package br.ufrn.transporte.dao.impl;
 
+import java.util.Collection;
+
 import javax.persistence.EntityManager;
 
 import br.ufrn.transporte.util.JPAUtil;
@@ -11,6 +13,12 @@ public class BaseDaoImpl<T> {
 	protected void insert(T entity) {
 		em.getTransaction().begin();
 		em.persist(entity);
+		em.getTransaction().commit();
+	}
+	
+	protected void insert(Collection<T> list) {
+		em.getTransaction().begin();
+		em.persist(list);
 		em.getTransaction().commit();
 	}
 	

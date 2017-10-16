@@ -3,12 +3,36 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+
     <ion-title>Viagem</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+  <ion-list>
+    <ion-item>
+      <ion-label>Início</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dtInicio"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fim</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dtFim"></ion-datetime>
+    </ion-item>
+    
+    <button ion-button icon-left full (click)="confirmarGeracaoViagens()">
+      <ion-icon name="bus"></ion-icon>
+      Gerar viagens
+    </button>
+  </ion-list>
+    
   <ion-list>
     <ion-list-header>
       Manhã
