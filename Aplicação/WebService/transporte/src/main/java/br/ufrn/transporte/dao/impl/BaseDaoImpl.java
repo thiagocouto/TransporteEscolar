@@ -18,7 +18,9 @@ public class BaseDaoImpl<T> {
 	
 	protected void insert(Collection<T> list) {
 		em.getTransaction().begin();
-		em.persist(list);
+		for (T t : list) {			
+			em.persist(t);
+		}
 		em.getTransaction().commit();
 	}
 	

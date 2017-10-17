@@ -4,20 +4,18 @@ import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angu
 import { RestapiServiceViagem } from '../../providers/restapi-serviceViagem';
 
 /**
- * Generated class for the Viagem page.
+ * Generated class for the GerarViagem page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-viagem',
-  templateUrl: 'viagem.html',
+  selector: 'page-gerar-viagem',
+  templateUrl: 'gerar-viagem.html',
 })
-export class Viagem {
+export class GerarViagem {
 
-  marker: {latitude, longitude} = {latitude: 0, longitude: 0};
-  
   dtInicio: Date;
   dtFim: Date;
 
@@ -29,7 +27,7 @@ export class Viagem {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Viagem');
+    console.log('ionViewDidLoad GerarViagem');
   }
 
   confirmarGeracaoViagens() {

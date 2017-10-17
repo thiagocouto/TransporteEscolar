@@ -46,7 +46,9 @@ public class ViagemServiceImpl implements ViagemService{
 		for (Map.Entry<DiaSemana, List<Horario>> entry : map.entrySet()){
 			for (Horario horario : entry.getValue()) {
 				List<Passageiro> passageiros = passageiroService.listarPassageirosHorario(horario);
-				viagens.add(this.obterViagem(horario, passageiros));
+				if(!passageiros.isEmpty()){
+					viagens.add(this.obterViagem(horario, passageiros));					
+				}
 			}
 		}
 		

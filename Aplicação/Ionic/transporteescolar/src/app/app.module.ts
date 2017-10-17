@@ -9,6 +9,7 @@ import { Passageiro } from '../pages/passageiro/passageiro';
 import { PassageiroChange } from '../pages/passageiro-change/passageiro-change';
 import { PassageiroDetail } from '../pages/passageiro-detail/passageiro-detail';
 import { PassageiroInsert } from '../pages/passageiro-insert/passageiro-insert';
+import { GerarViagem } from '../pages/gerar-viagem/gerar-viagem';
 import { Viagem } from '../pages/viagem/viagem';
 
 import { PassageiroDetailsComponent } from '../components/passageiro-details.component';
@@ -41,6 +42,7 @@ import { HttpModule } from '@angular/http';
     PassageiroFormTurnoComponent,
     PassageiroInsert,
     ListPage,
+    GerarViagem,
     Viagem
   ],
   imports: [
@@ -60,6 +62,7 @@ import { HttpModule } from '@angular/http';
     PassageiroChange,
     PassageiroDetail,
     PassageiroInsert,
+    GerarViagem,
     Viagem
   ],
   providers: [

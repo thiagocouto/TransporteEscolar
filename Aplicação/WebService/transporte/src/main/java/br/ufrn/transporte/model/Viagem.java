@@ -40,7 +40,7 @@ public class Viagem {
 	@Column(name="dt_inicio")
 	private Date inicio;
 	
-	@ManyToMany(cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name="tb_passageiro_viagem", 
     joinColumns= {@ JoinColumn(name="id_viagem")}, 
     inverseJoinColumns= {@JoinColumn(name="id_passageiro")})

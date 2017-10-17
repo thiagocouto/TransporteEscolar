@@ -31,9 +31,11 @@ public class PassageiroDaoImpl extends BaseDaoImpl<Passageiro> implements Passag
 	@Override
 	public List<Passageiro> listarPassageirosHorario(Horario horario) {
 		String hql = "SELECT p FROM Passageiro p "
-				   + "WHERE p.agenda.horarios in :horario";
+				   + "LEFT JOIN FETCH p.agenda a "
+				   + "LEFT JOIN FETCH a.horarios h "
+				   + "WHERE h.id in :idHorario";
 		TypedQuery<Passageiro> query = em.createQuery(hql, Passageiro.class);
-		query.setParameter("horario", horario);
+		query.setParameter("idHorario", horario.getId());
 		return query.getResultList();
 	}
 }
